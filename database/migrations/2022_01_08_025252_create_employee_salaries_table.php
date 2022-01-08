@@ -15,12 +15,11 @@ class CreateEmployeeSalariesTable extends Migration
     {
         Schema::create('employee_salaries', function (Blueprint $table) {
             $table->increments('id');
-            $table->increments('id_employee');
-            $table->timestamps();
+            $table->integer('employees_id')->unsigned();
+            $table->integer('total_accepted');
+            $table->dateTime('date_time');
 
-            $table->foreign('id')
-                    ->refrences('id_employee')
-                    ->on('employee');
+            $table->foreign('employees_id')->references('id')->on('employees');
         });
     }
 
