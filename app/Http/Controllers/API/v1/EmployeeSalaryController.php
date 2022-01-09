@@ -16,10 +16,12 @@ class EmployeeSalaryController extends Controller
         return new EmployeeSalaryCollection(EmployeeSalary::paginate());
     }
 
-    public function filter($date)
+    public function filter($year, $month)
     {
         return new EmployeeSalaryCollection(
-                EmployeeSalary::whereMonth('date_time', $date)->get()
+            EmployeeSalary::whereYear('date_time', '=', $year)
+                                        ->whereMonth('date_time', '=', $month)
+                                        ->get()
             );
     }
 
@@ -42,5 +44,10 @@ class EmployeeSalaryController extends Controller
             'message' => 'Berhasil menambahkan data',
             'data' => $attr
         ],200);
+    }
+
+    public function batch()
+    {
+
     }
 }
