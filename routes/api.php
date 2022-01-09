@@ -12,4 +12,7 @@ Route::group(["prefix" => "v1/employee"], function(){
 
     // Employee Salary
     Route::get('/salary', [EmployeeSalaryController::class, 'index']);
+    Route::get('/salary/{date_time}', [EmployeeSalaryController::class, 'filter']);
+    Route::post('/salary/store', [EmployeeSalaryController::class, 'store']);
+
 });

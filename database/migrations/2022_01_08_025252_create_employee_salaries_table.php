@@ -17,7 +17,8 @@ class CreateEmployeeSalariesTable extends Migration
             $table->increments('id');
             $table->integer('employees_id')->unsigned();
             $table->integer('total_accepted');
-            $table->dateTime('date_time');
+            $table->dateTime('date_time')
+                    ->useCurrent();
 
             $table->foreign('employees_id')->references('id')->on('employees');
         });

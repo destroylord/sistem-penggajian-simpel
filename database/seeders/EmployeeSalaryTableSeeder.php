@@ -14,6 +14,6 @@ class EmployeeSalaryTableSeeder extends Seeder
      */
     public function run()
     {
-        EmployeeSalary::factory()->times(10)->create();
+        EmployeeSalary::factory()->times(3)->create();
     }
 }

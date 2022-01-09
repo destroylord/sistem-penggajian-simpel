@@ -11,8 +11,9 @@ class EmployeeSalary extends Model
 
 
     public $timestamps = false;
-
+    protected $dates = ['date_time'];
     protected $table = 'employee_salaries';
+
 
     protected $fillable =
     [
@@ -20,5 +21,10 @@ class EmployeeSalary extends Model
         'total_accepted',
         'date_time'
     ];
+
+    public function employee()
+    {
+        return $this->belongsTo(Employee::class);
+    }
 
 }
