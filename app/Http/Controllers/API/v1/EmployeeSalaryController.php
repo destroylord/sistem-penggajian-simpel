@@ -7,6 +7,7 @@ use App\Http\Resources\EmployeeSalaryCollection;
 use App\Models\EmployeeSalary;
 use App\Http\Requests\EmployeeSalaryRequest;
 use App\Models\Employee;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 
 class EmployeeSalaryController extends Controller
@@ -46,8 +47,20 @@ class EmployeeSalaryController extends Controller
         ],200);
     }
 
-    public function batch()
+    public function batch(Request $request)
     {
 
+        $request->validate( [
+            '*.employees_id'     => 'required',
+            '*.total_accepted'  => 'required_with:person.*.last_name',
+        ]);
+
+        $data = EmployeeSalary::insert($request->all());
+
+        return response()->json([
+            'status' => 200,
+            'message' => 'Berhasil menambahkan data',
+            'data' => $data
+        ],200);
     }
 }

@@ -25,14 +25,38 @@ class EmployeeSalaryRequest extends FormRequest
     public function rules()
     {
         return [
-            'employees_id'      => 'required|unique:employee_salaries',
+            'employees_id'      => 'required|uniqMont',
         ];
     }
 
     public function withValidator($validator)
     {
         $validator->addExtension('uniqMont', function ($attribute, $value, $parameter, $validator) {
-            return ! EmployeeSalary::where('employees_id', $id)->whereMonth('date_time', $bulan)->exists();
+
+            echo '<pre>';
+            echo '1';
+            var_dump($attribute);
+            echo '</pre>';
+
+
+            echo '<pre>';
+            echo '2';
+            var_dump($value);
+            echo '</pre>';
+
+
+            echo '<pre>';
+            echo '3';
+            var_dump($parameter);
+            echo '</pre>';
+
+            
+            echo '<pre>';
+            echo '4';
+            var_dump($validator);
+            echo '</pre>';
+
+            // return ! EmployeeSalary::where('employees_id', $id)->whereMonth('date_time', $bulan)->exists();
         });
     }
 
