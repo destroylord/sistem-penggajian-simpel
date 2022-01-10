@@ -13,8 +13,10 @@ This Application in build using **Laravel** and full feature **REST-API**.
 
 + ### Running QUEUE
     + You can insert using POSTMAN.
-    + Example 
-        ![The San Juan Mountains are beautiful!](/public/images/Batch.PNG "San Juan Mountains")
+    <details>
+    <summary>Example<summary>
+    ![The San Juan Mountains are beautiful!](/public/images/Batch.PNG "San Juan Mountains")
+    </details>
     + Then you can running queue with typing terminal ``php artisan queue:work``
     + Check you database in table employees_salary
 
