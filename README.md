@@ -31,20 +31,20 @@ This Application in build using **Laravel** and full feature **REST-API**.
             + Key = Accepted
             + Value = application/json
         4. ScreenShot: 
-        ![Employee Post!](/public/images/API/Post-employee.PNG "Post Employee")
+        ![Employee Post!](https://github.com/destroylord/sistem-penggajian-simpel/blob/master/public/images/API/Post-Employee.PNG "Post Employee")
 
         </details>
 
-    + <details><summary>**GET Employee Salary**</summary>
+    + <details><summary>GET Employee Salary</summary>
 
         1. Endpoint: http://127.0.0.1:8000/api/v1/employee/salary
         2. Method : GET
         3. ScreenShot: 
-        ![Employee!](/public/images/API/Get-employee-Salary.PNG "Get Employee Salary")
+        ![Employee!](https://github.com/destroylord/sistem-penggajian-simpel/blob/master/public/images/API/Get-Employee-Salary.PNG "Get Employee Salary")
 
         </details>
 
-    + <details><summary>**POST Employee Salary**</summary>
+    + <details><summary>POST Employee Salary</summary>
 
         1. Endpoint: http://127.0.0.1:8000/api/v1/employee/salary/store
         2. Method : POST
@@ -52,16 +52,16 @@ This Application in build using **Laravel** and full feature **REST-API**.
             + Key = Accepted
             + Value = application/json
         4. ScreenShot: 
-        ![Employee!](/public/images/API/Post-employee-Salary.PNG "Post Employee Salary")
+        ![Employee!](https://github.com/destroylord/sistem-penggajian-simpel/blob/master/public/images/API/Post-Employee-Salary.PNG "Post Employee Salary")
 
         </details>
 
-    + <details><summary>**Get Employee Salary By Year-Month**</summary>
+    + <details><summary>GET Employee Salary By Year-Month</summary>
 
         1. Endpoint: http://127.0.0.1:8000/api/v1/employee/salary/2015/02
         2. Method : GET
         3. ScreenShot: 
-        ![Employee!](/public/images/API/GetSalaryByYearMonth "Get Employee Salary Year Month")
+        ![Employee!](https://github.com/destroylord/sistem-penggajian-simpel/blob/master/public/images/API/GetSalaryByYearMonth.PNG "Get Employee Salary Year Month")
 
         </details>
 
