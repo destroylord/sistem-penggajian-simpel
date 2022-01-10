@@ -23,47 +23,47 @@ This Application in build using **Laravel** and full feature **REST-API**.
 
         </details>
 
-<details><summary>**POST Employee**</summary>
+    + <details><summary>POST Employee</summary>
 
-1. Endpoint: http://127.0.0.1:8000/api/v1/employee
-2. Method : POST
-3. Header : 
-    + Key = Accepted
-    + Value = application/json
-4. ScreenShot: 
-![Employee Post!](/public/images/API/Post-employee.PNG "Post Employee")
+        1. Endpoint: http://127.0.0.1:8000/api/v1/employee
+        2. Method : POST
+        3. Header : 
+            + Key = Accepted
+            + Value = application/json
+        4. ScreenShot: 
+        ![Employee Post!](/public/images/API/Post-employee.PNG "Post Employee")
 
-</details>
+        </details>
 
-<details><summary>**GET Employee Salary**</summary>
+    + <details><summary>**GET Employee Salary**</summary>
 
-1. Endpoint: http://127.0.0.1:8000/api/v1/employee/salary
-2. Method : GET
-3. ScreenShot: 
-![Employee!](/public/images/API/Get-employee-Salary.PNG "Get Employee Salary")
+        1. Endpoint: http://127.0.0.1:8000/api/v1/employee/salary
+        2. Method : GET
+        3. ScreenShot: 
+        ![Employee!](/public/images/API/Get-employee-Salary.PNG "Get Employee Salary")
 
-</details>
+        </details>
 
-<details><summary>**POST Employee Salary**</summary>
+    + <details><summary>**POST Employee Salary**</summary>
 
-1. Endpoint: http://127.0.0.1:8000/api/v1/employee/salary/store
-2. Method : POST
-3. Header : 
-    + Key = Accepted
-    + Value = application/json
-4. ScreenShot: 
-![Employee!](/public/images/API/Post-employee-Salary.PNG "Post Employee Salary")
+        1. Endpoint: http://127.0.0.1:8000/api/v1/employee/salary/store
+        2. Method : POST
+        3. Header : 
+            + Key = Accepted
+            + Value = application/json
+        4. ScreenShot: 
+        ![Employee!](/public/images/API/Post-employee-Salary.PNG "Post Employee Salary")
 
-</details>
+        </details>
 
-<details><summary>**Get Employee Salary By Year-Month**</summary>
+    + <details><summary>**Get Employee Salary By Year-Month**</summary>
 
-1. Endpoint: http://127.0.0.1:8000/api/v1/employee/salary/2015/02
-2. Method : GET
-3. ScreenShot: 
-![Employee!](/public/images/API/GetSalaryByYearMonth "Get Employee Salary Year Month")
+        1. Endpoint: http://127.0.0.1:8000/api/v1/employee/salary/2015/02
+        2. Method : GET
+        3. ScreenShot: 
+        ![Employee!](/public/images/API/GetSalaryByYearMonth "Get Employee Salary Year Month")
 
-</details>
+        </details>
 
 
 
