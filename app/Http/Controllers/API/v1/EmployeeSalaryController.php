@@ -10,6 +10,7 @@ use App\Models\Employee;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use App\Helpers\Salary;
+use App\Jobs\EmployeeSalaryJob;
 
 class EmployeeSalaryController extends Controller
 {
@@ -59,17 +60,27 @@ class EmployeeSalaryController extends Controller
     public function batch(Request $request)
     {
 
-        $request->validate( [
-            '*.employees_id'     => 'required',
-            '*.total_accepted'  => 'required_with:person.*.last_name',
-        ]);
+        $employees = [];
 
-        $data = EmployeeSalary::insert($request->all());
+        foreach ($request->all() as $key ) {
+            $employee = Employee::where('id', $key['employees_id'])->first();
+            $employees[] = $employee;
+
+            if (!Salary::checkMonth($employee->id, date("Y-m"))) {
+            return response()
+                        ->json([
+                            'status' => 422,
+                            'message' => 'Tidak boleh sama dibulan ini',
+                        ], 422);
+            }
+        }
+
+        EmployeeSalaryJob::dispatch($employees);
 
         return response()->json([
             'status' => 200,
-            'message' => 'Berhasil menambahkan data',
-            'data' => $data
+            'message' => 'Berhasil menambahkan data'
         ],200);
+
     }
 }
