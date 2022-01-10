@@ -9,6 +9,7 @@ use App\Http\Requests\EmployeeSalaryRequest;
 use App\Models\Employee;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
+use App\Helpers\Salary;
 
 class EmployeeSalaryController extends Controller
 {
@@ -34,9 +35,17 @@ class EmployeeSalaryController extends Controller
 
         $employee = Employee::where('id', $attr)->first();
 
+        if (!Salary::checkMonth($employee->id, date("Y-m"))) {
+          return response()
+                    ->json([
+                        'status' => 422,
+                        'message' => 'Tidak boleh sama dibulan ini',
+                    ], 422);
+        }
+
         EmployeeSalary::create(array_merge(
             $request->getAttributes(), [
-                    'total_accepted' => $employee->total_salary
+                    'total_accepted' => $employee->total_salary,
                 ]
         ));
 
