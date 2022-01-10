@@ -70,7 +70,7 @@ This Application in build using **Laravel** and full feature **REST-API**.
 + ### Running QUEUE
     + You can insert using POSTMAN.
     + <details><summary>Get Employee</summary>
-       ![Batch](/public/images/Batch.PNG "Batch")
+       ![Batch](https://github.com/destroylord/sistem-penggajian-simpel/blob/master/public/images/Batch.PNG "Batch")
     </details>
     + Then you can running queue with typing terminal ``php artisan queue:work``
     + Check you database in table employees_salary
