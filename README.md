@@ -14,14 +14,14 @@ This Application in build using **Laravel** and full feature **REST-API**.
 
 + ### API using POSTMAN
 
-<details><summary>**GET Employee**</summary>
+    + <details><summary>GET Employee</summary>
 
-1. Endpoint: http://127.0.0.1:8000/api/v1/employee
-2. Method : GET
-3. ScreenShot: 
-![Employee!](/public/images/API/Get-employee.PNG "Get Employee")
+        1. Endpoint: http://127.0.0.1:8000/api/v1/employee
+        2. Method : GET
+        3. ScreenShot: 
+        ![Employee!](/public/images/API/Get-employee.PNG "Get Employee")
 
-</details>
+        </details>
 
 <details><summary>**POST Employee**</summary>
 
@@ -31,7 +31,7 @@ This Application in build using **Laravel** and full feature **REST-API**.
     + Key = Accepted
     + Value = application/json
 4. ScreenShot: 
-![Employee!](/public/images/API/Post-employee.PNG "Post Employee")
+![Employee Post!](/public/images/API/Post-employee.PNG "Post Employee")
 
 </details>
 
