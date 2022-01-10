@@ -12,19 +12,20 @@ This Application in build using **Laravel** and full feature **REST-API**.
     + Then you migrate and Seeder this project ``php artisan migrate --seed``
     + Last you running this application using terminal ``php artisan serve``
 
-+ ### API for POSTMAN
-    + <details><summary>Get Employee</summary>
-        ```php
-            <?php echo "Hello World"; ?>
-        ```
++ ### API using POSTMAN
+    + **GET Employee**
+    <details><summary>Example:</summary>
+    1. Endpoint: http://127.0.0.1:8000/api/v1/employee
+    2. Method : GET
+    3. ScreenShot: 
+        ![Employee!](/public/images/API/Get-employee.PNG "Get Employee")
     </details>
 
 + ### Running QUEUE
     + You can insert using POSTMAN.
-    + <details>
-        <summary>Example<summary>
-            ![The San Juan Mountains are beautiful!](/public/images/Batch.PNG "San Juan Mountains")
-        </details>
+    + <details><summary>Get Employee</summary>
+       ![Batch](/public/images/Batch.PNG "Batch")
+    </details>
     + Then you can running queue with typing terminal ``php artisan queue:work``
     + Check you database in table employees_salary
 
